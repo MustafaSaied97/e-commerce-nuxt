@@ -1,7 +1,9 @@
 <template>
 <v-app-bar >
     <v-toolbar-title @click="$router.push('/')">
-        shopping website
+        <v-btn class="text-none" stacked>
+            shopping website
+        </v-btn>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <NuxtLink to='/cart'>
