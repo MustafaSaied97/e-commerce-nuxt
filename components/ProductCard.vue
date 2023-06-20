@@ -73,7 +73,7 @@
         </span>
         <span v-if="type==='cart'">
             <v-card class="mx-auto" >
-                <v-row align-content="center" >
+                <v-row  align-content="center" height="200px">
                     <v-col cols="4" >
                         <v-img :src="product.image"  :lazy-src="product.thumbnail"  height="200px" cover  >
                         <template v-slot:placeholder>
@@ -128,7 +128,6 @@
                         </v-card-actions>
                     </v-col>
                 </v-row>
-                
             </v-card>
         </span>
        

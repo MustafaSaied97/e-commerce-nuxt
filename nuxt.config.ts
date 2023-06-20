@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    css:['@fortawesome/fontawesome-free','@mdi/font/css/materialdesignicons.min.css'],
+    css:['vuetify','@fortawesome/fontawesome-free','@mdi/font/css/materialdesignicons.min.css'],
     modules: [
         
         '@invictus.codes/nuxt-vuetify','@pinia/nuxt',

@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire"   :theme="useCartStore().theme">
     <Header/>
     <v-main>
       <v-container>
@@ -10,18 +10,20 @@
   </v-app>
 </template>
 
-<script>
-  export default {
-    data: () => ({
-      overlay: false,
-    }),
+<script setup>
+import { useCartStore } from './stores/cart';
 
-    watch: {
-      // overlay (val) {
-      //   val && setTimeout(() => {
-      //     this.overlay = false
-      //   }, 3000)
-      // },
-    },
-  }
+  // export default {
+  //   data: () => ({
+  //     overlay: false,
+  //   }),
+
+  //   watch: {
+  //     // overlay (val) {
+  //     //   val && setTimeout(() => {
+  //     //     this.overlay = false
+  //     //   }, 3000)
+  //     // },
+  //   },
+  // }
 </script>

@@ -582,8 +582,37 @@ export const useCartStore=defineStore('cartStore',{
                     cost:idAndQuatity?.quantity*product?.price
                 }
             })
-        }
-
+        },
+        // total(){
+        //     return Object.keys(this.cartProducts).reduce((tot,id)=>{
+        //         const product=this.products.find(p=>p.id==id)
+        //         if(product){
+        //             return tot+(product.price*this.cartProducts[id].quantity)
+        //         }else{
+        //             return tot+0
+        //         }
+        //     },0)
+        // }
+        total(){
+            return Object.keys(this.cartProducts).reduce((tot,id)=>{
+                const product=this.formattedCartProducts.find(p=>p.id==id)
+                if(product){
+                    return tot+product.cost
+                }else{
+                    return tot+0
+                }
+            },0)
+        },
+        productsTotal(){
+            return Object.keys(this.cartProducts).reduce((nums,id)=>{
+                const product=this.formattedCartProducts.find(p=>p.id==id)
+                if(product){
+                    return nums+this.cartProducts[id].quantity
+                }else{
+                    return nums+0
+                }
+            },0)
+        },
     },
     actions:{
 
@@ -617,6 +646,9 @@ export const useCartStore=defineStore('cartStore',{
         },
         handleDelete(productId){
             delete this.cartProducts[productId]
+        },
+        toggleTheme(){
+            this.theme=this.theme=='light'? 'dark':'light'
         }
     }
 })

@@ -6,17 +6,18 @@
     <v-spacer></v-spacer>
     <NuxtLink to='/cart'>
         <v-btn class="text-none" stacked>
-            <v-badge :content="9" color="error">
+            <v-badge v-if="cartStore.productsTotal" :content="cartStore.productsTotal" color="error">
                 <v-icon>mdi-cart-outline</v-icon>
             </v-badge>
+            <v-icon  v-else>mdi-cart-outline</v-icon>
         </v-btn>
     </NuxtLink>
-    <!-- <v-btn :prepend-icon="theme==='light'? 'mdi-weather-sunny':'mdi-weather-night'">
+
+    <v-btn class="ma-2" @click="cartStore.toggleTheme">
+        <v-icon start :icon="cartStore.theme=='light'? 'mdi-weather-sunny':'mdi-weather-night'"></v-icon>
         Toggle Theme
-    </v-btn> -->
-    <v-btn prepend-icon="mdi-weather-sunny">
-        Toggle Theme
-    </v-btn>
+    </v-btn >
+
 </v-app-bar>
 </template>
 
