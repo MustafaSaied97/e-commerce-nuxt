@@ -25,10 +25,14 @@ export default defineNuxtConfig({
       head: {
         title:'e-commerce',
         meta:[
-          {property:'og:title',content:'e-commerce'},
+          {property:'og:title',content:'e-commerce title'},
           {property:'og:type',content:'website'},
           {property:'og:image',content:'https://e7.pngegg.com/pngimages/324/868/png-clipart-online-shopping-e-commerce-retail-digital-marketing-e-commerce-text-retail-thumbnail.png'},
-          {property:'og:description',content:'e-commerce'},
+          {property:'og:image:width',content:'100'},
+          {property:'og:description',content:'e-commerce description'},
+        ],
+        link:[
+          {rel:'icon',href:'https://e7.pngegg.com/pngimages/324/868/png-clipart-online-shopping-e-commerce-retail-digital-marketing-e-commerce-text-retail-thumbnail.png'},
         ]
       }
     }
