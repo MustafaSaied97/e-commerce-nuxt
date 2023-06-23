@@ -29,12 +29,20 @@
 </template>
 
 <script setup>
-    const products=ref([])
-    onMounted(async()=>{
-        const {data}= await useFetch('https://dummyjson.com/products')
-        products.value=data.value.products
-        localStorage.setItem('products',JSON.stringify(products.value))
-    })
+import { storeToRefs } from "pinia";
+import {useCartStore} from "../stores/cart";
+    const cartStore=useCartStore()
+    const {getAllProducts}=cartStore
+    const {products}=storeToRefs(cartStore)
+    await getAllProducts()
+    console.log(products)
+    // console.log(products.value)
+    // const products=ref([])
+    // onMounted(async()=>{
+    //     const {data}= await useFetch('https://dummyjson.com/products')
+    //     products.value=data.value.products
+    //     localStorage.setItem('products',JSON.stringify(products.value))
+    // })
     
    
     const grid= ref(true)
