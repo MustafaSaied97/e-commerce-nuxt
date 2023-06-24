@@ -2,7 +2,7 @@ export default defineNuxtConfig({
     css:['vuetify','@fortawesome/fontawesome-free','@mdi/font/css/materialdesignicons.min.css'],
     modules: [
         
-        '@invictus.codes/nuxt-vuetify','@pinia/nuxt',
+      , '@invictus.codes/nuxt-vuetify','@pinia/nuxt','nuxt-simple-sitemap'
     ],
     vuetify: {
       /* vuetify options */
@@ -35,5 +35,12 @@ export default defineNuxtConfig({
           {rel:'icon',href:'https://e7.pngegg.com/pngimages/324/868/png-clipart-online-shopping-e-commerce-retail-digital-marketing-e-commerce-text-retail-thumbnail.png'},
         ]
       }
+    },
+    runtimeConfig: {
+      sitemap: {
+        siteUrl: 'http://192.168.1.11:3000',
+      },
     }
-  })
+  })  
+
+  

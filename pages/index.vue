@@ -36,8 +36,6 @@ import {useCartStore} from "../stores/cart";
     const {products}=storeToRefs(cartStore)
     await getAllProducts()
 
-    
-   
 
     const grid= ref(true)
     const toggle =()=>grid.value=!grid.value
