@@ -32,7 +32,7 @@ export default defineNuxtConfig({
           {property:'og:description',content:'e-commerce description'},
         ],
         link:[
-          {rel:'icon',href:'https://e7.pngegg.com/pngimages/324/868/png-clipart-online-shopping-e-commerce-retail-digital-marketing-e-commerce-text-retail-thumbnail.png'},
+          {rel:'icon',href:'https://www.svgrepo.com/show/293110/online-store-commerce.svg'},
         ]
       }
     },
